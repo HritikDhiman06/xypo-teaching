@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        section {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #a {
+            background-image: url(images/background.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #b {
+            padding: 100px 0px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+        }
+
+        #c {
+            padding: 50px 0px;
+        }
+
+        #d {
+            padding: 100px 0px;
+            display: flex;
+        }
+
+        #e {
+            margin: 30px 0px;
+            display: flex;
+        }
+        
+
+        .social {
+            width: 50px;
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 1;
+
+        }
+
+        .social img {
+            display: block;
+            width: 20px;
+            margin: 0px auto 20px;
+            cursor: pointer;
+        }
+
+        .headert {
+            height: 100vh;
+
+        }
+
+        .container {
+            margin: 0px 100px;
+        }
+
+        .logo {
+            margin-top: 30px;
+            width: 100px;
+        }
+
+        .text {
+            max-width: 350px;
+            margin-top: 140px;
+        }
+
+        h1 {
+            font-size: 34px;
+        }
+
+        .square {
+            margin-top: 10px;
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            background: #f67c92;
+            margin: 15px opx;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 18px 40px;
+            background: transparent;
+            outline: none;
+            border: 2px solid #f67c92;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 18px;
+            color: #777;
+
+        }
+
+        .header-text button {
+            margin-top: 20px;
+            margin-bottom: 60px;
+        }
+
+        .line-deco {
+            background: #f67c92;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .line1 {
+            width: 15px;
+            height: 15px;
+        }
+
+        .line2 {
+            width: 80px;
+            height: 1px;
+        }
+
+        .line3 {
+            width: 60px;
+            height: 1px;
+        }
+
+        .line {
+            line-height: 8px;
+        }
+
+        .left {
+            flex-basis: 25%;
+        }
+
+        .leftcol {
+            flex-basis: 50%;
+        }
+
+        .leftcol img {
+            width: 100%;
+        }
+
+        .rightcol {
+            flex-basis: 50%;
+            text-align: right;
+        }
+
+        .righttext {
+            max-width: 500px;
+            margin-right: 100px;
+            display: inline-block;
+        }
+
+        .righttext h2 {
+            margin: 50px 0px 10px 0px;
+            font-size: 28px;
+            font-style: italic;
+        }
+
+        .righttext h3 {
+            font-size: 28px;
+            font-style: italic;
+            color: #777;
+        }
+
+        .fearow {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .feacol {
+            flex-basis: 25%;
+            text-align: center;
+
+        }
+
+        .feacol img {
+            width: 100px;
+        }
+
+        .feacol h4 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        .feat-btn {
+            margin: 80px auto 0;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .feat-btn .line {
+            text-align: right;
+            display: inline-block;
+            margin-right: 25px;
+        }
+
+        .course {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .courseleft {
+            flex-basis: 50%;
+        }
+
+        .courseright {
+            flex-basis: 50%;
+
+        }
+
+        .courseright img {
+            width: 90%;
+        }
+
+        .coursetext {
+            max-width: 350px;
+            margin-left: 80px;
+        }
+
+        .coursetext btn {
+            margin: 30px 0px;
+        }
+        #f{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .contactleftcol .contactrightcol{
+            flex-basis: 50%;
+        }
+        .contactrightcol img{
+            width: 100%;
+            
+        }
+        form{
+            max-width: 350px;
+            margin: 30px 0px;
+        }
+        form input{
+            width: 100%;
+            padding: 12px 10px;
+            margin-bottom: 5px;
+            outline: none;
+            box-shadow: none;
+            box-sizing: border-box;
+            border: 2px solid #fab3c4;
+        }
+        .btnbox{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .btnbox button{
+            flex-basis: 48%;
+            padding: 18x 0px;
+        }
+   
+    </style>
+</head>
+
+<body>
+    <section id="a">
+        <div class="container">
+            <img src="images/logo.png" alt="" class="logo">
+            <div class="text">
+                <h1>The Purpose is to <br>teach,bring learning to people </h1>
+            </div>
+            <span class="square"></span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sunt maxime minus culpa incidunt
+                aspernatur, <br> dolore consequatur tempora quos eius soluta quia <br> quis cupiditate magnam dolorum
+                esse magni ducimus pariatur cumque.</p>
+            <button class="btn">Read More</button>
+            <div class="line">
+                <span class="line1 line-deco"></span><br>
+                <span class="line2 line-deco"></span><br>
+                <span class="line3 line-deco"></span>
+            </div>
+        </div>
+        <div class="social">
+            <img src="images/facebook.png" alt="">
+            <img src="images/instagram.png" alt="">
+            <img src="images/twitter.png" alt="">
+            <img src="images/linkedin.png" alt="">
+
+    </section>
+
+
+    </section>
+    <section id="b">
+        <div class="leftcol">
+            <img src="images/about.png" alt="">
+        </div>
+        <div class="rightcol">
+            <div class="righttext">
+                <h1>About Us</h1>
+                <span class="square"></span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, rerum quasi. Adipisci, doloribus
+                    placeat corporis alias quis a iste voluptate excepturi quas totam omnis mollitia sint maxime
+                    cupiditate nihil laudantium!</p><br><br>
+                <div class="line">
+                    <span class="line1 line-deco"></span><br>
+                    <span class="line2 line-deco"></span><br>
+                    <span class="line3 line-deco"></span>
+                </div>
+                <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, cumque!</h2>
+                <h3>-Abigail Adams</h3>
+            </div>
+        </div>
+    </section>
+    <section id="c">
+        <div class="fearow">
+            <div class="feacol">
+                <img src="images/pic-1.png" alt="">
+                <h4>Learn Anywhere</h4>
+                <p>Switch between your Computer,table or mobile device.</p>
+            </div>
+            <div class="feacol">
+                <img src="images/pic-2.png" alt="">
+                <h4>Expert Teachers</h4>
+                <p>Learn From Industry Experts who are passionate about teaching</p>
+            </div>
+            <div class="feacol">
+                <img src="images/pic-3.png" alt="">
+                <h4>Unlimited Access</h4>
+                <p>Choose what you'd like to learb from our extensive subscription library.</p>
+            </div>
+        </div>
+        <div class="feat-btn">
+            <div class="line">
+                <span class="line-1 line-deco"></span><br>
+                <span class="line-2 line-deco"></span><br>
+                <span class="line-3 line-deco"></span>
+            </div>
+            <button class="btn">Start Free Trial</button>
+        </div>
+
+        </div>
+        </div>
+    </section>
+    <section id="d">
+        <div class="course">
+            <div class="courseleft">
+                <div class="coursetext">
+                    <h1>Browser Our Top <br>Courses</h1>
+                    <span class="square"></span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus illum harum provident
+                        nisi cupiditate reprehenderit dolore at voluptatem reiciendis autem?</p>
+                    <button class="btn">View All Courses</button>
+                    <div class="line">
+                        <span class="line-1 line-deco"></span><br>
+                        <span class="line-2 line-deco"></span><br>
+                        <span class="line-3 line-deco"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="courseright">
+                <img src="images/course.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="e">
+        <div class="leftcol">
+            <img src="images/offer.png" alt="">
+        </div>
+        <div class="rightcol">
+            <div class="righttext">
+                <h1>Limitless learning <br>limitless possvilities</h1>
+                <span class="square"></span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sunt quaerat repellat eveniet
+                    reprehenderit veritatis sed sit, assumenda adipisci cum?</p>
+                <button class="btn">Start Free Trial</button>
+                <div class="line">
+                    <span class="line-1 line-deco"></span><br>
+                    <span class="line-2 line-deco"></span><br>
+                    <span class="line-3 line-deco"></span>
+                </div>
+                <h2>"Learning is not attained by chance,it must be sought for with ardor and attended to with diligence"
+                </h2>
+                <h3>-Abigail Adams</h3>
+            </div>
+        </div>
+    </section>
+    <section id="f">
+        <div class="container contactrow">
+            <div class="contactleftcol">
+                <h1>Sign Up to Join our <br>Learning Community</h1>
+                <form action="">
+                    <input type="text" placeholder="Enter Your Name">
+                    <input type="email" placeholder="Enter Your Email">
+                    <input type="password" placeholder="Enter Password">
+                    <div class="btnbox">
+                        <button class="btn">Sign Up</button>
+                        <button class="btn">Start Free Trial</button>
+                    </div>
+                </form>
+                <div class="contactrightcol">
+                    <img src="images/contact.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
